@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoLogoPython, IoMoonOutline } from "react-icons/io5";
 import { MdArrowOutward } from "react-icons/md";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -6,16 +6,26 @@ import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScroll, setIsScroll] = useState(false)
+  useEffect(()=>{
+      window.addEventListener('scroll',()=>{
+        if(scrollY > 50){
+            setIsScroll(true)
+        }else{
+          setIsScroll(false)
+        }
+      })
+  },[])
 
   return (
-    <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ">
+    <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm" : ""} `}>
       {/* Logo */}
       <a href="#top">
         <p className="w-10 h-10 cursor-pointer mr-4 font-bold text-3xl">ELYAS&trade;</p>
       </a>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+      <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"} `}>
         <li><a href="#top">Home</a></li>
         <li><a href="#about">About me</a></li>
         <li><a href="#services">Services</a></li>

@@ -2,6 +2,11 @@ import Image from 'next/image'
 import { FaCode } from "react-icons/fa6";
 import { RiGraduationCapLine } from "react-icons/ri";
 import { IoBagHandleOutline } from "react-icons/io5";
+import { FaChrome } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+import { IoLogoFigma } from "react-icons/io5";
+import { RiNextjsFill } from "react-icons/ri";
+import { RiTailwindCssFill } from "react-icons/ri";
 import React from 'react'
 
 const About = () => {
@@ -41,7 +46,24 @@ const About = () => {
                 <p className='text-gray-600 text-sm'>Built more than 5 real projects</p>
               </li>
             </ul>
-            <h4>Tools I use</h4>
+            <h4 className='my-6 text-gray-700'>Tools I use</h4>
+            <ul className='flex items-center gap-3 sm:gap-5'>
+              <li className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'>
+                <VscVscode className='w-10 h-10 sm:w-7'/>
+              </li>
+              <li  className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'>
+                <FaChrome className='w-10 h-10 sm:w-7'/>
+              </li>
+              <li  className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'>
+                <IoLogoFigma className='w-10 h-10 sm:w-7'/>
+              </li>
+              <li  className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'>
+                <RiNextjsFill className='w-10 h-10 sm:w-7'/>
+              </li>
+              <li  className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'>
+                <RiTailwindCssFill className='w-10 h-10 sm:w-7'/>
+              </li>
+            </ul>
         </div>
       </div>
     </div>
