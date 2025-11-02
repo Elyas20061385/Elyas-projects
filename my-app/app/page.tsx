@@ -2,6 +2,9 @@
 import About from "./components/About";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -9,6 +12,9 @@ export default function Home() {
      <Navbar/>
      <Header/>
      <About/>
+     <Services />
+     <Contact />
+     <Footer />
    </>
   );
 }

@@ -59,7 +59,7 @@ const Navbar = () => {
       {/* Mobile Side Menu */}
       <div
         className={`flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-all duration-500 ${
-          menuOpen ? "right-0" : "right-[-100%]"
+          menuOpen ? "right-0" : "-right-full"
         }`}
       >
         <button
@@ -73,7 +73,7 @@ const Navbar = () => {
         <ul className="flex flex-col gap-4">
           <li><a href="#top" onClick={() => setMenuOpen(false)}>Home</a></li>
           <li><a href="#about" onClick={() => setMenuOpen(false)}>About me</a></li>
-          <li><a href="#services" onClick={() => setMenuOpen(false)}>Services</a></li>
+          <li><a href="#services" onClick={() => setMenuOpen(false)}>Achivement</a></li>
           <li><a href="#work" onClick={() => setMenuOpen(false)}>My Work</a></li>
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact me</a></li>
         </ul>
