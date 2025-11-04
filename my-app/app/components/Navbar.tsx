@@ -18,14 +18,14 @@ const Navbar = () => {
   },[])
 
   return (
-    <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm" : ""} `}>
+    <nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-[#1a003c]/50 backdrop-blur-lg shadow-sm" : ""} `}>
       {/* Logo */}
       <a href="#top">
-        <p className="w-10 h-10 cursor-pointer mr-4 font-bold text-3xl">ELYAS&trade;</p>
+        <p className="w-10 h-10 cursor-pointer mr-4 font-bold text-3xl text-white">ELYAS&trade;</p>
       </a>
 
       {/* Desktop Menu */}
-      <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50"} `}>
+      <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 text-white ${isScroll ? "" : "bg-[#1a003c]/50 shadow-sm bg-opacity-50"} `}>
         <li><a href="#top">Home</a></li>
         <li><a href="#about">About me</a></li>
         <li><a href="#services">Services</a></li>
@@ -36,12 +36,12 @@ const Navbar = () => {
       {/* Right Side Buttons */}
       <div className="flex items-center gap-4">
         <button aria-label="Toggle dark mode">
-          <IoMoonOutline className="w-6 h-6" />
+          <IoMoonOutline className="w-6 h-6 text-white" />
         </button>
 
         <a
           href="#contact"
-          className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+          className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 text-white"
         >
           Contact <MdArrowOutward className="w-3" />
         </a>
@@ -52,7 +52,7 @@ const Navbar = () => {
           className="block md:hidden ml-3"
           onClick={() => setMenuOpen(true)}
         >
-          <RiMenu3Fill className="w-6 h-6 cursor-pointer" />
+          <RiMenu3Fill className="w-6 h-6 cursor-pointer text-white" />
         </button>
       </div>
 
